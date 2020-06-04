@@ -14,4 +14,10 @@ def keys():
 	
 	list2 = ['#','+','.','*','/','^','~']
 	
-	return list[random.randrange(6)]
+	return list[random.randrange(6)] 
+
+	rows = session.query(animal).count()
+	number = random.randrange(rows)
+	result = animal.query.filter_by(id = number)
+	word = result.word
+	return word
