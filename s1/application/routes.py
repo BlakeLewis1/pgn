@@ -21,3 +21,27 @@ def animal():
 
         db.session.add(animalData)
         db.session.commit()
+
+@app.route('/fruit', methods=['GET', 'POST'])
+def animal():
+    form = FruitForm()
+    fruit = fruit.query.all()
+    if form.validate_on_submit():
+        fruitData = Fruit(
+            fruit = form.fruit.data
+        )
+
+        db.session.add(fruitData)
+        db.session.commit()
+
+@app.route('/colour', methods=['GET', 'POST'])
+def colour():
+    form = ColourForm()
+    colour = colour.query.all()
+    if form.validate_on_submit():
+        colourData = Colour(
+            colour = form.colour.data
+        )
+
+        db.session.add(colourData)
+        db.session.commit()
