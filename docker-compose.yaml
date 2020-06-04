@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+    environment:   
+      FLASK_DB_URI=${SOLAR_DB}
+      FLASK_SECRET_KEY=${SECRET_KEY}
+  service1:
+    build: ./s1
+    ports:
+    - target: 5000
+      published: 5000
+  service1:
+    build: ./s1
+    ports:
+    - target: 5000
+      published: 5000
+  service1:
+    build: ./s1
+    ports:
+    - target: 5000
+      published: 5000
+  service4:
+    build: ./s4
+    ports:
+    - target: 5003
+      published: 5003
+
+
+
