@@ -10,29 +10,35 @@ services:
     - type: bind
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
-    environment:   
-      FLASK_DB_URI=${SOLAR_DB}
-      FLASK_SECRET_KEY=${SECRET_KEY}
   service1:
+    image: blakelewis1/service-1:latest
     build: ./s1
     ports:
-    - target: 5000
-      published: 5000
-  service1:
-    build: ./s1
+    - target: 8000
+      published: 8000
+    environment:
+    - PGN_DB=${PGN_DB}
+  service2:
+    image: blakelewis1/service-2:latest
+    build: ./s2
     ports:
-    - target: 5000
-      published: 5000
-  service1:
-    build: ./s1
+    - target: 8001
+      published: 8001
+    environment:
+    - PGN_DB=${PGN_DB}
+  service3:
+    image: blakelewis1/service-3:latest
+    build: ./s3
     ports:
-    - target: 5000
-      published: 5000
+    - target: 8002
+      published: 8002
+    environment:
+    - PGN_DB=${PGN_DB}
   service4:
+    image: blakelewis1/service-4:latest
     build: ./s4
     ports:
-    - target: 5003
-      published: 5003
-
-
-
+    - target: 8003
+      published: 8003
+    environment:
+    - PGN_DB=${PGN_DB}
