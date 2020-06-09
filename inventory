@@ -1,0 +1,5 @@
+[master]
+manager node
+
+[workers]
+node1

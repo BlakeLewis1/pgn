@@ -1,0 +1,25 @@
+- hosts: all
+  
+  become: true
+  
+  tasks:
+
+- name : 'add docker key'
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name : 'add docker repo'
+    apt_repository:
+      repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+      state: present
+  - name : 'install docker'
+    apt:
+      name: docker
+      state: latest
+      update_cache: true
+  - name : 'adding node to docker swarm'
+    docker_swarm:
+        state: join
+        advertise_addr: 
+        join_token: 
+        remote_addrs: 
