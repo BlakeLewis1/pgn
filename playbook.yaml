@@ -18,8 +18,4 @@
       state: latest
       update_cache: true
   - name : 'adding node to docker swarm'
-    docker_swarm:
-        state: join
-        advertise_addr: 
-        join_token: 
-        remote_addrs: 
+    
