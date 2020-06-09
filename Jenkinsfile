@@ -11,3 +11,6 @@ pipeline{
             steps{
                 sh './script/docker.sh'
             }
+        }
+    }
+}    
