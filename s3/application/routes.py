@@ -1,23 +1,20 @@
-from application import app
+from application import app, db
+from application.models import Animal
 import random
 
 
 @app.route('/animal', methods=['GET'])
 def ending():
 
-	list = ['cat','dog','bird','fish','lion','monkey','snake']
-	
-	return list[random.randrange(6)]
 
-@app.route('/keys', methods=['GET'])
-def keys():
-	
-	list2 = ['#','+','.','*','/','^','~']
-	
-	return list[random.randrange(6)] 
+	length = Animal.query.count()
+	rand = random.randint(1, length)
+	animalRow = Animal.query.filter_by(id = rand).first()
+	animal = animalRow.word
+	return animal
 
-	rows = session.query(animal).count()
-	number = random.randrange(rows)
-	result = animal.query.filter_by(id = number)
-	word = result.word
-	return word
+#	list = ['cat','dog','bird','fish','lion','monkey','snake']
+	
+#	return list[random.randrange(len(list))]
+
+

@@ -5,10 +5,10 @@ import random
 
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://localhost:5003/randomword')
+    response = requests.get('http://service4:8003/randomword')
     print(response)
     password = response.text
-    return render_template('index.html', sentence = sentence, title = 'Home')
+    return render_template('page.html', sentence = password, title = 'Home')
 
 @app.route('/animal', methods=['GET', 'POST'])
 def animal():
@@ -23,7 +23,7 @@ def animal():
         db.session.commit()
 
 @app.route('/fruit', methods=['GET', 'POST'])
-def animal():
+def fruit():
     form = FruitForm()
     fruit = fruit.query.all()
     if form.validate_on_submit():
