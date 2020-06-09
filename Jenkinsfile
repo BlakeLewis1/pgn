@@ -7,7 +7,7 @@ pipeline{
                 sh 'chmod +x ./script/*'
             }
         }
-        stage('docker swarm stack')
+        stage('docker swarm stack'){
             steps{
                 sh './script/docker.sh'
             }
