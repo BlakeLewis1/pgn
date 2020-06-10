@@ -6,16 +6,9 @@ import random
 
 @app.route('/', methods=['GET'])
 def home():
-    animal = Animals.query.filter_by(animal.email.data).first()
-    form1 = AnimalForm
-    
-
-    fruit = Fruits.query.filter_by(fruit.email.data).first()
-    form2 = FruitForm
-
-    
-    colour = Colours.query.filter_by(colour.email.data).first()
-    form3 = ColourForm
+    form1 = AnimalForm()
+    form2 = FruitForm()
+    form3 = ColourForm()
 
     response = requests.get('http://service4:8003/randomword')
     print(response)
