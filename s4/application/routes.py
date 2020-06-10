@@ -13,8 +13,10 @@ def password():
 
     words = [animal, fruit, colour, num] # makes an array to hold generated
 
-    password = ""
+    password = animal + " " + fruit + " " + colour + " " + num
+    """
     randWords = random.choices(words, k = 5) # new array of words in random order, k is number of items
     for i in range(len(randWords)): # 
         password += randWords[i] # pulls each item from array and store it as password,
+    """
     return password
