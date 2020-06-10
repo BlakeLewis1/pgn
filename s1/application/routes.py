@@ -1,14 +1,26 @@
 from application import app
 from flask import render_template, request
+from application.forms import AnimalForm, FruitForm, ColourForm
 import requests
 import random
 
 @app.route('/', methods=['GET'])
 def home():
+    animal = Animals.query.filter_by(animal.email.data).first()
+    form1 = AnimalForm
+    
+
+    fruit = Fruits.query.filter_by(fruit.email.data).first()
+    form2 = FruitForm
+
+    
+    colour = Colours.query.filter_by(colour.email.data).first()
+    form3 = ColourForm
+
     response = requests.get('http://service4:8003/randomword')
     print(response)
     password = response.text
-    return render_template('page.html', sentence = password, title = 'Home')
+    return render_template('page.html', AnimalForm = form1, FruitForm = form2, ColourForm = form3  sentence = password, title = 'Home')
 
 @app.route('/animal', methods=['GET', 'POST'])
 def animal():

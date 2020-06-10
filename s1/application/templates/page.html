@@ -2,12 +2,12 @@
     <html>
         <head>
             <title>
-                Password Generator Network
+                PGN
             </title>
         </head>
         <body>
             <h1>
-                Secure Password Generator Website
+                Password Generator Network
             </h1>
 
             <p>
@@ -18,6 +18,17 @@
                 Generate New Password
             </button> 
 
+            <form action="{{ url_for('animal') }}">
+                <button type="submit">Add animal </button>
+             </form>
+            
+             <form action="{{ url_for('fruit') }}">
+                <button type="submit">Add fruit </button>
+             </form>
+            
+             <form action="{{ url_for('colour') }}">
+                <button type="submit">Add a colour </button>
+             </form>
 
         </body>
     </html>    
