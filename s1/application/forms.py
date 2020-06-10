@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField, IntegerField
 from wtforms.validators import DataRequired, Length
 
 class AnimalForm(FlaskForm):
-    animal = StringField('Enter an animal',
+    word = StringField('Enter an animal',
         validators = [
             DataRequired(),
             Length(min=2, max=50)
@@ -12,7 +12,7 @@ class AnimalForm(FlaskForm):
 submit = SubmitField('Submit Animal')
 
 class FruitForm(FlaskForm):
-    fruit = StringField('Enter a Fruit',
+    word = StringField('Enter a Fruit',
         validators = [
             DataRequired(),
             Length(min=2, max=50)
@@ -21,7 +21,7 @@ class FruitForm(FlaskForm):
 submit = SubmitField('Submit Fruit')
 
 class ColourForm(FlaskForm):
-    colour = StringField('Enter a Colour',
+    word = StringField('Enter a Colour',
         validators = [
             DataRequired(),
             Length(min=2, max=50)

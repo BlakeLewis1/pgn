@@ -22,6 +22,7 @@
                 <form method="POST" action=''>
                     {{ AnimalForm.hidden_tag() }}
                     {{ AnimalForm.word.label }}
+                    {{ AnimalForm.word }}
 
                 </form>
                 <form action="{{ url_for('animal') }}">
@@ -33,6 +34,7 @@
                 <form method="POST" action=''>
                     {{ FruitForm.hidden_tag() }}
                     {{ FruitForm.word.label }}
+                    {{ FruitForm.word }}
 
                 </form>
                 <form action="{{ url_for('fruit') }}">
@@ -44,6 +46,7 @@
                 <form method="POST" action=''>
                     {{ ColourForm.hidden_tag() }}
                     {{ ColourForm.word.label }}
+                    {{ ColourForm.word }}
 
                 </form>
                 <form action="{{ url_for('colour') }}">
