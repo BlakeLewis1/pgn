@@ -1,5 +1,6 @@
 from application import app, db
 from application.models import Fruit, Colour
+from flask import Response, request
 import random
 
 
@@ -10,7 +11,7 @@ def beginning():
 	rand = random.randint(1, length)
 	fruitRow = Fruit.query.filter_by(id = rand).first()
 	fruit = fruitRow.word
-	return fruit
+	return Response(fruit, mimetype="text/plain")
 
 	#list = ['apple','pear','melon','mango','orange','grape','banana']
 	
