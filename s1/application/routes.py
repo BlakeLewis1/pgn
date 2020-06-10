@@ -1,6 +1,7 @@
-from application import app
+from application import app, db
 from flask import render_template, request
 from application.forms import AnimalForm, FruitForm, ColourForm
+from application.models import Animal, Fruit, Colour
 import requests
 import random
 
@@ -18,7 +19,7 @@ def home():
 @app.route('/animal', methods=['GET', 'POST'])
 def animal():
     form = AnimalForm()
-    animal = animal.query.all()
+    animal = Animal.query.all()
     if form.validate_on_submit():
         animalData = Animal(
             animal = form.animal.data
@@ -30,7 +31,7 @@ def animal():
 @app.route('/fruit', methods=['GET', 'POST'])
 def fruit():
     form = FruitForm()
-    fruit = fruit.query.all()
+    fruit = Fruit.query.all()
     if form.validate_on_submit():
         fruitData = Fruit(
             fruit = form.fruit.data
@@ -42,7 +43,7 @@ def fruit():
 @app.route('/colour', methods=['GET', 'POST'])
 def colour():
     form = ColourForm()
-    colour = colour.query.all()
+    colour = Colour.query.all()
     if form.validate_on_submit():
         colourData = Colour(
             colour = form.colour.data
