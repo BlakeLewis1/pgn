@@ -18,17 +18,38 @@
                 Generate A Password
             </button> 
 
-            <form action="{{ url_for('animal') }}">
-                <button type="submit">Add animal </button>
-             </form>
+            <div class="form-group">
+                <form method="POST" action=''>
+                    {{ form.hidden_tag() }}
+                    {{ AnimalForm.word.label }}
+
+                </form>
+                <form action="{{ url_for('animal') }}">
+                    <button type="submit">Add animal </button>
+                </form>
+            </div>
+
+            <div class="form-group">
+                <form method="POST" action=''>
+                    {{ form.hidden_tag() }}
+                    {{ FruitForm.word.label }}
+
+                </form>
+                <form action="{{ url_for('fruit') }}">
+                    <button type="submit">Add fruit </button>
+                </form>
+            </div>
             
-             <form action="{{ url_for('fruit') }}">
-                <button type="submit">Add fruit </button>
-             </form>
-            
-             <form action="{{ url_for('colour') }}">
-                <button type="submit">Add a colour </button>
-             </form>
+            <div class="form-group">
+                <form method="POST" action=''>
+                    {{ form.hidden_tag() }}
+                    {{ ColourForm.word.label }}
+
+                </form>
+                <form action="{{ url_for('colour') }}">
+                    <button type="submit">Add a colour </button>
+                </form>
+            </div>
 
         </body>
     </html>    
