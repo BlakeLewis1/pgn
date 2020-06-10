@@ -13,19 +13,19 @@ def home():
 
     if form1.validate_on_submit():
         animalData = Animal(
-            word = form1.word.data
+            animal = form1.animal.data
         )
         db.session.add(animalData)
 
     if form2.validate_on_submit():
         fruitData = Fruit(
-            word = form2.word.data
+            fruit = form2.fruit.data
         )
         db.session.add(fruitData)
 
     if form3.validate_on_submit():
         colourData = Colour(
-            word = form3.word.data
+            colour = form3.colour.data
         )
         db.session.add(colourData)
 

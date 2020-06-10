@@ -4,6 +4,12 @@
             <title>
                 PGN
             </title>
+            <!--style>
+                .body {
+                    background-color : #000000;
+                    color: #ffffff;
+                }
+            </style-->
         </head>
         <body>
             <h1>
@@ -21,11 +27,8 @@
             <div class="form-group">
                 <form method="POST" action=''>
                     {{ AnimalForm.hidden_tag() }}
-                    {{ AnimalForm.word.label }}
-                    {{ AnimalForm.word }}
-
-                
-                
+                    {{ AnimalForm.animal.label }}
+                    {{ AnimalForm.animal }}
                     {{ AnimalForm.submit }}
                 </form>
             </div>
@@ -33,8 +36,8 @@
             <div class="form-group">
                 <form method="POST" action=''>
                     {{ FruitForm.hidden_tag() }}
-                    {{ FruitForm.word.label }}
-                    {{ FruitForm.word }}
+                    {{ FruitForm.fruit.label }}
+                    {{ FruitForm.fruit }}
 
                     {{ FruitForm.submit }}
                 </form>
@@ -43,8 +46,8 @@
             <div class="form-group">
                 <form method="POST" action=''>
                     {{ ColourForm.hidden_tag() }}
-                    {{ ColourForm.word.label }}
-                    {{ ColourForm.word }}
+                    {{ ColourForm.colour.label }}
+                    {{ ColourForm.colour }}
                     {{ ColourForm.submit }}
                 </form>
             </div>
