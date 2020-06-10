@@ -18,6 +18,7 @@ services:
       published: 8000
     environment:
     - PGN_DB=${PGN_DB}
+    - SECRET_KEY=${SECRET_KEY}
   service2:
     image: blakelewis1/service-2:latest
     build: ./s2
@@ -26,6 +27,7 @@ services:
       published: 8001
     environment:
     - PGN_DB=${PGN_DB}
+    - SECRET_KEY=${SECRET_KEY}
   service3:
     image: blakelewis1/service-3:latest
     build: ./s3
@@ -34,6 +36,7 @@ services:
       published: 8002
     environment:
     - PGN_DB=${PGN_DB}
+    - SECRET_KEY=${SECRET_KEY}
   service4:
     image: blakelewis1/service-4:latest
     build: ./s4
@@ -42,3 +45,4 @@ services:
       published: 8003
     environment:
     - PGN_DB=${PGN_DB}
+    - SECRET_KEY=${SECRET_KEY}
