@@ -9,7 +9,7 @@ def beginning():
 	length = Fruit.query.count()
 	rand = random.randint(1, length)
 	fruitRow = Fruit.query.filter_by(id = rand).first()
-	fruit = fruitRow.fruit
+	fruit = fruitRow.word
 	return fruit
 
 	#list = ['apple','pear','melon','mango','orange','grape','banana']
@@ -26,5 +26,5 @@ def middle():
 	length = Colour.query.count()
 	rand = random.randint(1, length)
 	colourRow = Colour.query.filter_by(id = rand).first()
-	colour = colourRow.colour
+	colour = colourRow.word
 	return colour
