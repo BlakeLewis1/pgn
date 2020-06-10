@@ -24,8 +24,8 @@
                     {{ AnimalForm.word.label }}
                     {{ AnimalForm.word }}
 
-                </form>
-                <form action="{{ url_for('animal') }}">
+                
+                
                     {{ AnimalForm.submit }}
                 </form>
             </div>
@@ -36,8 +36,6 @@
                     {{ FruitForm.word.label }}
                     {{ FruitForm.word }}
 
-                </form>
-                <form action="{{ url_for('fruit') }}">
                     {{ FruitForm.submit }}
                 </form>
             </div>
@@ -47,9 +45,6 @@
                     {{ ColourForm.hidden_tag() }}
                     {{ ColourForm.word.label }}
                     {{ ColourForm.word }}
-
-                </form>
-                <form action="{{ url_for('colour') }}">
                     {{ ColourForm.submit }}
                 </form>
             </div>

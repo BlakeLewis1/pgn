@@ -9,7 +9,7 @@ class AnimalForm(FlaskForm):
             Length(min=2, max=50)
         ]
     )
-submit = SubmitField('Submit Animal')
+    submit = SubmitField('Submit Animal')
 
 class FruitForm(FlaskForm):
     word = StringField('Enter a Fruit',
@@ -18,7 +18,7 @@ class FruitForm(FlaskForm):
             Length(min=2, max=50)
         ]
     )
-submit = SubmitField('Submit Fruit')
+    submit = SubmitField('Submit Fruit')
 
 class ColourForm(FlaskForm):
     word = StringField('Enter a Colour',
@@ -27,4 +27,4 @@ class ColourForm(FlaskForm):
             Length(min=2, max=50)
         ]
     )
-submit = SubmitField('Submit Colour')
+    submit = SubmitField('Submit Colour')
