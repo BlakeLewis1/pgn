@@ -1,5 +1,5 @@
 from application import app, db
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
 from application.forms import AnimalForm, FruitForm, ColourForm
 from application.models import Animal, Fruit, Colour
 import requests
@@ -27,6 +27,7 @@ def animal():
 
         db.session.add(animalData)
         db.session.commit()
+    return redirect(url_for('home'))
 
 @app.route('/fruit', methods=['GET', 'POST'])
 def fruit():
@@ -40,6 +41,8 @@ def fruit():
         db.session.add(fruitData)
         db.session.commit()
 
+    return redirect(url_for('home'))
+
 @app.route('/colour', methods=['GET', 'POST'])
 def colour():
     form = ColourForm()
@@ -51,3 +54,5 @@ def colour():
 
         db.session.add(colourData)
         db.session.commit()
+
+    return redirect(url_for('home'))
