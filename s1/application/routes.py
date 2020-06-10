@@ -25,8 +25,8 @@ def animal():
             animal = form.animal.data
         )
 
-        db.session.add(animalData)
-        db.session.commit()
+    db.session.add(animalData)
+    db.session.commit()
     return redirect(url_for('home'))
 
 @app.route('/fruit', methods=['GET', 'POST'])
@@ -52,7 +52,7 @@ def colour():
             colour = form.colour.data
         )
 
-        db.session.add(colourData)
-        db.session.commit()
+    db.session.add(colourData)
+    db.session.commit()
 
     return redirect(url_for('home'))
