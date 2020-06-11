@@ -13,16 +13,9 @@ def beginning():
 	fruit = fruitRow.fruit
 	return Response(fruit, mimetype="text/plain")
 
-	#list = ['apple','pear','melon','mango','orange','grape','banana']
-	
-	#return list[random.randrange(len(list))]
 
 @app.route('/colour', methods=['GET'])
 def middle():
-
-#	list = ['red','yellow','green','blue','orange','gold','black']
-	
-#	return list[random.randrange(len(list))]
 
 	length = Colour.query.count()
 	rand = random.randint(1, length)
