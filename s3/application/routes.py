@@ -13,8 +13,5 @@ def ending():
 	animal = animalRow.animal
 	return animal
 
-#	list = ['cat','dog','bird','fish','lion','monkey','snake']
-	
-#	return list[random.randrange(len(list))]
 
 
