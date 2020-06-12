@@ -19,6 +19,8 @@ services:
     environment:
     - PGN_DB=${PGN_DB}
     - SECRET_KEY=${SECRET_KEY}
+    deploy:
+      replicas: 2
   service2:
     image: blakelewis1/service-2:latest
     build: ./s2
@@ -28,6 +30,8 @@ services:
     environment:
     - PGN_DB=${PGN_DB}
     - SECRET_KEY=${SECRET_KEY}
+    deploy:
+      replicas: 2
   service3:
     image: blakelewis1/service-3:latest
     build: ./s3
@@ -37,6 +41,8 @@ services:
     environment:
     - PGN_DB=${PGN_DB}
     - SECRET_KEY=${SECRET_KEY}
+    deploy:
+      replicas: 2
   service4:
     image: blakelewis1/service-4:latest
     build: ./s4
@@ -46,3 +52,5 @@ services:
     environment:
     - PGN_DB=${PGN_DB}
     - SECRET_KEY=${SECRET_KEY}
+    deploy:
+      replicas: 2
