@@ -15,7 +15,7 @@ def password():
 
     password = " "
     
-    randWords = random.choices(words, k = 5) # new array of words in random order, k is number of items
+    randWords = random.choices(words, k = 5) #new array of words in random order, k is number of items
     for i in range(len(randWords)): #
         password += randWords[i] # pulls each item from array and store it as password,
     
