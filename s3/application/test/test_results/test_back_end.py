@@ -26,17 +26,22 @@ class TestBase(TestCase):
         db.session.commit()
         db.drop_all()
         db.create_all()
-    
-    def tearDown(self):
-        """
-        Will be called after every test
-        """
+        animal1 = Animal(animal='pig')
+        animal2 = Animal(animal='fox')
+        animal3 = Animal(animal='pigeon')
+        animal4 = Animal(animal='tiger')
+        db.session.add(animal1)
+        db.session.add(animal2)
+        db.session.add(animal3)
+        db.session.add(animal4)
+        db.session.commit()
 
+    def tearDown(self):
         db.session.remove()
         db.drop_all()
 
 class TestViews(TestBase):
     def test_homepage_view(self):
-        response = self.client.get(url_for('animal'))
+        response = self.client.get(url_for('ending'))
         self.assertEqual(response.status_code, 200)
 

@@ -26,7 +26,26 @@ class TestBase(TestCase):
         db.session.commit()
         db.drop_all()
         db.create_all()
-    
+        fruit1 = Fruit(fruit='apple')
+        fruit2 = Fruit(fruit='pineapple')
+        fruit3 = Fruit(fruit='mango')
+        fruit4 = Fruit(fruit='pear')
+        colour1 = Colour(colour='red')
+        colour2 = Colour(colour='blue')
+        colour3 = Colour(colour='gold')
+        colour4 = Colour(colour='black')
+        db.session.add(fruit1)
+        db.session.add(fruit2)
+        db.session.add(fruit3)
+        db.session.add(fruit4)
+        db.session.add(colour1)
+        db.session.add(colour2)
+        db.session.add(colour3)
+        db.session.add(colour4)
+
+
+
+
     def tearDown(self):
         """
         Will be called after every test
@@ -37,6 +56,10 @@ class TestBase(TestCase):
 
 class TestViews(TestBase):
     def test_homepage_view(self):
-        response = self.client.get(url_for('animal'))
+        response = self.client.get(url_for('beginning'))
         self.assertEqual(response.status_code, 200)
 
+class TestViews(TestBase):
+    def test_homepage_view(self):
+        response = self.client.get(url_for('middle'))
+        self.assertEqual(response.status_code, 200)
