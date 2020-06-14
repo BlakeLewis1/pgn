@@ -51,3 +51,7 @@ One of the first things I created for this project was the trello board that I w
 ![CI Pipeline](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/CI%20Pipeline.png)
 
 above is the general-flow of my ci-pipeline that i have created the source code was edited in vsc or visual studio code 
+
+## database structure
+
+![erd](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/PGN%20ER-Diagram.png)
