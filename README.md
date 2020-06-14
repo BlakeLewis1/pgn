@@ -29,6 +29,8 @@ The requirements of the project are as follows:
 One of the first things I created for this project was the trello board that I was required to create this helped me structure the project.
 
 [Trello](https://trello.com/b/UzEPIn17/pgn)
+![Before and after trello](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/trello%20board%20.png)
+
 
 ## Architecture 
 
@@ -45,3 +47,13 @@ One of the first things I created for this project was the trello board that I w
 * Containerisation: Docker
 
 * Orchestration Tool: Docker Swarm
+
+## CI Pipeline
+
+![CI Pipeline](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/CI%20Pipeline.png)
+
+above is the general-flow of my ci-pipeline that i have created the source code was edited in vsc or visual studio code 
+
+## database structure
+
+![erd](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/PGN%20ER-Diagram.png)
