@@ -45,3 +45,7 @@ One of the first things I created for this project was the trello board that I w
 * Containerisation: Docker
 
 * Orchestration Tool: Docker Swarm
+
+## CI Pipeline
+
+above is the general-flow of my ci-pipeline that i have created the source code was edited in vsc or visual studio code 
