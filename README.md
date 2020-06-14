@@ -1,5 +1,5 @@
-# pgn
-sofia project 2
+# PGN
+SFIA Project 2
 
 ## Project Brief
 
@@ -52,8 +52,29 @@ One of the first things I created for this project was the trello board that I w
 
 ![CI Pipeline](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/CI%20Pipeline.png)
 
-above is the general-flow of my ci-pipeline that i have created the source code was edited in vsc or visual studio code 
+above is the general-flow of my ci-pipeline that i have created the source code was edited in vsc or visual studio code
 
-## database structure
+## Jenkins
+to make sure that my project had continious integration I needed to configure a Jenkins Pipeline for the project
+![image](https://user-images.githubusercontent.com/64256460/84602373-cefcae80-ae7e-11ea-945f-fdf598396464.png)
+To create the pipe above i had to create a jenkinsfile this file would instruct jenkins on what to do in this case it would tell jenkins to pull the project and then enable all the executable scripts and the final part of the pipe is to deploy the swarm stack.
 
-![erd](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/PGN%20ER-Diagram.png)
+## Ansible
+I used ansible to configure the virtual machines and run the application I created a playbook allowed me to run tasks on multiple VMs. These tasks included in installing Docker on each machine, initializing my Docker Swarm and connecting my worker nodes to the swarm.
+
+## Database Structure
+
+![ERD](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/PGN%20ER-Diagram.png)
+
+This is the structure of the tables these tables do not require a relationship between them and each will only hold the name of the items added by the 
+
+## Testing 
+Intially I wanted to apply a TDD approach to this project and consistently make tests for the different services in my application however this wasn't possible as I could not do this at a consistent enough level. I used PyTest when testing my code I had errors with getting tests to test outside of the service which was crucial for my project however by creating a seperate testing suite I was able to complete the testing for each of the services, linked below are the coverage reports.   
+
+[service1 testing report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%201%20report.png)
+
+[service2 testing report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%202%20report.png)
+
+[service3 testing report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%203%20report.png)
+
+[service4 testong report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%204%20report.png)
