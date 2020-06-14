@@ -56,7 +56,7 @@ above is the general-flow of my ci-pipeline that i have created the source code 
 
 ## Jenkins
 to make sure that my project had continious integration I needed to configure a Jenkins Pipeline for the project
-![image](https://user-images.githubusercontent.com/64256460/84602373-cefcae80-ae7e-11ea-945f-fdf598396464.png)
+![image](https://user-images.githubusercontent.com/64256460/84604823-abdafa80-ae90-11ea-8436-320367607843.png)
 To create the pipe above i had to create a jenkinsfile this file would instruct jenkins on what to do in this case it would tell jenkins to pull the project and then enable all the executable scripts and the final part of the pipe is to deploy the swarm stack.
 
 ## Ansible
