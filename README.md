@@ -60,7 +60,10 @@ to make sure that my project had continious integration I needed to configure a 
 To create the pipe above i had to create a jenkinsfile this file would instruct jenkins on what to do in this case it would tell jenkins to pull the project and then enable all the executable scripts and the final part of the pipe is to deploy the swarm stack.
 
 ## Ansible
-I used ansible to configure the virtual machines and run the application I created a playbook allowed me to run tasks on multiple VMs. These tasks included in installing Docker on each machine, initializing my Docker Swarm and connecting my worker nodes to the swarm.
+I used ansible to configure the virtual machines and run the application I created a playbook allowed me to run tasks on multiple VMs. These tasks included in installing Docker on each machine, initializing my Docker Swarm and connecting my worker nodes to the swarm. 
+
+## Database
+For my database i created a sql instance using gcp in the instance I created 3 tables that had no relationship with each other and would these would consist of an id number along with a word which would be either an animal for the animals table or a fruit for the fruit table and so on these tables would get these words from the user once they type them in. I added this feature to make sure that there was data that was able to be persisted.
 
 ## Database Structure
 
@@ -77,4 +80,16 @@ Intially I wanted to apply a TDD approach to this project and consistently make 
 
 [service3 testing report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%203%20report.png)
 
-[service4 testong report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%204%20report.png)
+[service4 testong report](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/service%204%20report.png) 
+
+## self reflection 
+
+I was able to create a fully functioning application that is able to give a very secure password.
+The project is able to produe a password that is secure and random due to the way that the password is generated in service 4 as it will randomise not just the words selected but the order and length of the password this meant that there was little chance that the user would get the same password twice this would also be a secutity feature as it is more secure to have different passwords for each account you make. In addition to this the user would also be allowed to add their own words so that the passsword generated would be more memorable for the user. 
+
+However there are some improvements that could have been made for the application that would help in future use  
+
+Improvements would include a way to add a test for how strong the password created would be this would enable the user to have a better idea of how strong their password is and enable them to decide whether they want a  new password instead of the one generated. 
+In addition to this I would have liked to have a css for the webpage and make the site look more professional than what it currently is. 
+To add to this i would have also liked to have a dark mode button implemented for the website this would be a good feature for the user in low light conditions reduce eye strain in low-light conditions as Dark Mode can reduce eye-strain in low light conditions. 100% contrast (white on a black background) can be harder to read and cause more eye strain. It can be harder to read long chunks of text with a light-on-dark theme.
+
