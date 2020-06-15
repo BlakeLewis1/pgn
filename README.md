@@ -31,7 +31,8 @@ One of the first things I created for this project was the trello board that I w
 [Trello](https://trello.com/b/UzEPIn17/pgn)
 ![Before and after trello](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/trello%20board%20.png)
 
-
+## Risk Assessment
+[risks](https://github.com/BlakeLewis1/pgn/blob/master/Documentation/risk%20assessment%202.1%20-%20Sheet1.pdf)
 ## Architecture 
 
 * Kanban Board: Asana or an equivalent Kanban Board
